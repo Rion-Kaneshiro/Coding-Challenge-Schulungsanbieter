@@ -7,13 +7,6 @@ import Model
 
 public struct CourseListReducer: ReducerProtocol {
   public struct State: Equatable {
-    struct Row: Equatable, Identifiable {
-      let id: Int
-      var title: String
-      var description: String
-      var tutorName: String
-    }
-    
     var courses: IdentifiedArrayOf<Course> = []
     
     var path = StackState<CourseDetailReducer.State>()
