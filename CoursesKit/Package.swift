@@ -1,4 +1,4 @@
-// swift-tools-version: 5.8
+// swift-tools-version: 5.9
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -6,11 +6,12 @@ import PackageDescription
 let package = Package(
     name: "CoursesKit",
     platforms: [
-      .macOS(.v13),
-      .iOS(.v16)
+      .macOS(.v14),
+      .iOS(.v17)
     ],
     products: [
       .library(name: "AddEventFeature", targets: ["AddEventFeature"]),
+      .library(name: "AppFeature", targets: ["AppFeature"]),
       .library(name: "CourseClient", targets: ["CourseClient"]),
       .library(name: "CourseClientLive", targets: ["CourseClientLive"]),
       .library(name: "CourseDetailFeature", targets: ["CourseDetailFeature"]),
@@ -33,6 +34,16 @@ let package = Package(
           "Model",
         ],
         path: "Sources/Client/AddEventFeature"
+      ),
+      .target(
+        name: "AppFeature",
+        dependencies: [
+          .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
+          "CourseClientLive",
+          "CourseListFeature",
+          "Model",
+        ],
+        path: "Sources/Client/AppFeature"
       ),
       .target(
         name: "CourseClient",

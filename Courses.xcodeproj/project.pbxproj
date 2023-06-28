@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE56335C2A4C251100806D17 /* AppFeature in Frameworks */ = {isa = PBXBuildFile; productRef = AE56335B2A4C251100806D17 /* AppFeature */; };
 		AEC290472A459B8100420BB8 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = AEC290462A459B8100420BB8 /* ComposableArchitecture */; };
-		AED802232A41B1AD00C9F22C /* CourseClientLive in Frameworks */ = {isa = PBXBuildFile; productRef = AED802222A41B1AD00C9F22C /* CourseClientLive */; };
-		AED802252A41B1AD00C9F22C /* CourseListFeature in Frameworks */ = {isa = PBXBuildFile; productRef = AED802242A41B1AD00C9F22C /* CourseListFeature */; };
 		AEE5C0632A41A76500989857 /* CoursesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE5C0622A41A76500989857 /* CoursesApp.swift */; };
 		AEE5C0672A41A76500989857 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEE5C0662A41A76500989857 /* Assets.xcassets */; };
 		AEE5C06B2A41A76500989857 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEE5C06A2A41A76500989857 /* Preview Assets.xcassets */; };
@@ -31,8 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AED802252A41B1AD00C9F22C /* CourseListFeature in Frameworks */,
-				AED802232A41B1AD00C9F22C /* CourseClientLive in Frameworks */,
+				AE56335C2A4C251100806D17 /* AppFeature in Frameworks */,
 				AEC290472A459B8100420BB8 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -103,9 +101,8 @@
 			);
 			name = Courses;
 			packageProductDependencies = (
-				AED802222A41B1AD00C9F22C /* CourseClientLive */,
-				AED802242A41B1AD00C9F22C /* CourseListFeature */,
 				AEC290462A459B8100420BB8 /* ComposableArchitecture */,
+				AE56335B2A4C251100806D17 /* AppFeature */,
 			);
 			productName = Courses;
 			productReference = AEE5C05F2A41A76500989857 /* Courses.app */;
@@ -223,9 +220,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -280,9 +277,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -313,10 +310,10 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = de.braun.andreas.Courses;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -352,10 +349,10 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = de.braun.andreas.Courses;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -402,18 +399,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		AE56335B2A4C251100806D17 /* AppFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AppFeature;
+		};
 		AEC290462A459B8100420BB8 /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = AEC290452A459B8100420BB8 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = ComposableArchitecture;
-		};
-		AED802222A41B1AD00C9F22C /* CourseClientLive */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = CourseClientLive;
-		};
-		AED802242A41B1AD00C9F22C /* CourseListFeature */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = CourseListFeature;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
