@@ -2,7 +2,7 @@ import ComposableArchitecture
 import Foundation
 import Model
 
-public struct AddEventReducer: ReducerProtocol {
+public struct AddEventFeature: ReducerProtocol {
   public struct State: Equatable {
     @BindingState var date: Date = .now
     

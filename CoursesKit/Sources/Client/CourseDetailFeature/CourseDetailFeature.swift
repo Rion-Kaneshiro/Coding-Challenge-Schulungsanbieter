@@ -12,7 +12,7 @@ enum Enrollability: CaseIterable, Equatable {
   case enrolled
 }
 
-public struct CourseDetailReducer: ReducerProtocol {
+public struct CourseDetailFeature: ReducerProtocol {
   public struct State: Equatable {
     struct Row: Equatable, Identifiable {
       let id: UUID
@@ -21,7 +21,7 @@ public struct CourseDetailReducer: ReducerProtocol {
       let enrollability: Enrollability
     }
     
-    @PresentationState var addEvent: AddEventReducer.State?
+    @PresentationState var addEvent: AddEventFeature.State?
     
     let course: Course
     var title: String {
@@ -42,7 +42,7 @@ public struct CourseDetailReducer: ReducerProtocol {
   
   public enum Action: Equatable {
     case addEventButtonTapped
-    case addEvent(PresentationAction<AddEventReducer.Action>)
+    case addEvent(PresentationAction<AddEventFeature.Action>)
     case fetch
     case fetchFinished(TaskResult<[Event]>)
   }
@@ -94,7 +94,7 @@ public struct CourseDetailReducer: ReducerProtocol {
       }
     }
     .ifLet(\.$addEvent, action: /Action.addEvent) {
-      AddEventReducer()
+      AddEventFeature()
     }
   }
 }

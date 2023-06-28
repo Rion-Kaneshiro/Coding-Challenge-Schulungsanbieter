@@ -5,11 +5,11 @@ import Dependencies
 import Foundation
 import Model
 
-public struct CourseListReducer: ReducerProtocol {
+public struct CourseListFeature: ReducerProtocol {
   public struct State: Equatable {
     var courses: IdentifiedArrayOf<Course> = []
     
-    var path = StackState<CourseDetailReducer.State>()
+    var path = StackState<CourseDetailFeature.State>()
     
     public init() {}
   }
@@ -17,7 +17,7 @@ public struct CourseListReducer: ReducerProtocol {
   public enum Action: Equatable {
     case fetch
     case fetchFinished(TaskResult<[Course]>)
-    case path(StackAction<CourseDetailReducer.State, CourseDetailReducer.Action>)
+    case path(StackAction<CourseDetailFeature.State, CourseDetailFeature.Action>)
   }
   
   enum CancelID {
@@ -50,7 +50,7 @@ public struct CourseListReducer: ReducerProtocol {
       }
     }
     .forEach(\.path, action: /Action.path) {
-      CourseDetailReducer()
+      CourseDetailFeature()
     }
   }
 }

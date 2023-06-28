@@ -2,24 +2,24 @@ import ComposableArchitecture
 import CourseListFeature
 import Foundation
 
-public struct AppFeatureReducer: ReducerProtocol {
+public struct AppFeature: ReducerProtocol {
   public struct State: Equatable {
-    var listState: CourseListReducer.State
+    var listState: CourseListFeature.State
     
-    public init(listState: CourseListReducer.State = .init()) {
+    public init(listState: CourseListFeature.State = .init()) {
       self.listState = listState
     }
   }
   
   public enum Action: Equatable {
-    case list(CourseListReducer.Action)
+    case list(CourseListFeature.Action)
   }
   
   public init() {}
   
   public var body: some ReducerProtocolOf<Self> {
     Scope(state: \.listState, action: /Action.list) {
-      CourseListReducer()
+      CourseListFeature()
     }
     Reduce { state, action in
       switch action {

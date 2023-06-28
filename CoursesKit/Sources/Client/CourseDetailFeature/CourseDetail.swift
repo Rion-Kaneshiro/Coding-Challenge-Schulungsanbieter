@@ -6,9 +6,9 @@ import SwiftUI
 
 public struct CourseDetail: View {
   
-  let store: StoreOf<CourseDetailReducer>
+  let store: StoreOf<CourseDetailFeature>
   
-  public init(store: StoreOf<CourseDetailReducer>) {
+  public init(store: StoreOf<CourseDetailFeature>) {
     self.store = store
   }
   
@@ -130,7 +130,7 @@ struct CourseDetail_Previews: PreviewProvider {
       CourseDetail(
         store: .init(
           initialState: .init(course: Course.previewPianoJumpstart),
-          reducer: CourseDetailReducer()
+          reducer: CourseDetailFeature()
         )
       )
     }

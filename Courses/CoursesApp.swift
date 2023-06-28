@@ -6,7 +6,7 @@ import SwiftUI
 struct CoursesApp: App {
   let store = Store(
     initialState: .init(),
-    reducer: AppFeatureReducer()
+    reducer: AppFeature()
   )
   
   var body: some Scene {

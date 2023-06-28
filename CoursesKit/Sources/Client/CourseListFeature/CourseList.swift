@@ -5,9 +5,9 @@ import Model
 import SwiftUI
 
 public struct CourseList: View {
-  let store: StoreOf<CourseListReducer>
+  let store: StoreOf<CourseListFeature>
   
-  public init(store: StoreOf<CourseListReducer>) {
+  public init(store: StoreOf<CourseListFeature>) {
     self.store = store
   }
   
@@ -16,7 +16,7 @@ public struct CourseList: View {
       WithViewStore(self.store, observe: { $0 }) { viewStore in
         List {
           ForEach(viewStore.courses) { course in
-            NavigationLink(state: CourseDetailReducer.State(course: course)) {
+            NavigationLink(state: CourseDetailFeature.State(course: course)) {
               CourseRow(
                 title: course.title,
                 description: course.description,
@@ -65,7 +65,7 @@ struct TrainingEventsList_Previews: PreviewProvider {
       CourseList(
         store: .init(
           initialState: .init(),
-          reducer: CourseListReducer()
+          reducer: CourseListFeature()
         )
       )
     }

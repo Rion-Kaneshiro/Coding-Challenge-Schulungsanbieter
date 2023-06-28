@@ -3,9 +3,9 @@ import Foundation
 import SwiftUI
 
 public struct AddEvent: View {
-  let store: StoreOf<AddEventReducer>
+  let store: StoreOf<AddEventFeature>
   
-  public init(store: StoreOf<AddEventReducer>) {
+  public init(store: StoreOf<AddEventFeature>) {
     self.store = store
   }
   
@@ -39,7 +39,7 @@ struct AddEvent_Previews: PreviewProvider {
     AddEvent(
       store: .init(
         initialState: .init(),
-        reducer: AddEventReducer()
+        reducer: AddEventFeature()
       )
     )
   }

@@ -5,9 +5,9 @@ import Foundation
 import SwiftUI
 
 public struct AppView: View {
-  let store: StoreOf<AppFeatureReducer>
+  let store: StoreOf<AppFeature>
   
-  public init(store: StoreOf<AppFeatureReducer>) {
+  public init(store: StoreOf<AppFeature>) {
     self.store = store
   }
   
@@ -21,7 +21,7 @@ struct AppView_Previews: PreviewProvider {
     AppView(
       store: .init(
         initialState: .init(),
-        reducer: AppFeatureReducer(),
+        reducer: AppFeature(),
         prepareDependencies: {
           $0.apiClient = .previewValue
         }
