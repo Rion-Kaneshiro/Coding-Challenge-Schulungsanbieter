@@ -16,11 +16,16 @@ public struct AppView: View {
   }
 }
 
-#Preview {
-  AppView(
-    store: .init(
-      initialState: .init(),
-      reducer: AppFeatureReducer()
+struct AppView_Previews: PreviewProvider {
+  static var previews: some View {
+    AppView(
+      store: .init(
+        initialState: .init(),
+        reducer: AppFeatureReducer(),
+        prepareDependencies: {
+          $0.apiClient = .previewValue
+        }
+      )
     )
-  )
+  }
 }

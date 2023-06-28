@@ -65,18 +65,7 @@ struct TrainingEventsList_Previews: PreviewProvider {
       CourseList(
         store: .init(
           initialState: .init(),
-          reducer: CourseListReducer(),
-          prepareDependencies: {
-            $0.apiClient = .failing.override(.courses(.fetch)) {
-              try .ok(
-                [
-                  Course.previewIntroToThePiano,
-                  .previewImprovObstacleCourse,
-                  .previewIntroToMusicTheory
-                ]
-              )
-            }
-          }
+          reducer: CourseListReducer()
         )
       )
     }

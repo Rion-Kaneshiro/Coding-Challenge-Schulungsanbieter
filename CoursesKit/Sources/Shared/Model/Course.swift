@@ -27,6 +27,16 @@ public struct Price: Codable, Equatable {
 }
 
 extension Course {
+  public static let allPreviews: [Course] = [
+    .previewIntroToThePiano,
+    .previewIntroToImprovisation,
+    .previewMakingSenseOfModes,
+    .previewHarmony101,
+    .previewImprovObstacleCourse,
+    .previewIntroToMusicTheory,
+    .previewPianoJumpstart
+  ]
+  
   public static let previewIntroToThePiano: Course = .init(
     id: 0,
     title: "An Intro to the Piano",

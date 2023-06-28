@@ -33,3 +33,14 @@ public struct AddEvent: View {
     }
   }
 }
+
+struct AddEvent_Previews: PreviewProvider {
+  static var previews: some View {
+    AddEvent(
+      store: .init(
+        initialState: .init(),
+        reducer: AddEventReducer()
+      )
+    )
+  }
+}
